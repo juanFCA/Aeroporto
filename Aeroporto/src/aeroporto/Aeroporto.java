@@ -15,8 +15,15 @@ public class Aeroporto {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+       
+        Pista p = new Pista();
+        Thread tp = new Thread(p);
         
+        Aeronave a = new Aeronave();
+        Thread ta = new Thread(a);
+        
+        tp.start();
+        ta.start();
     }
-    
+      
 }
