@@ -19,11 +19,6 @@ public class Aeroporto {
         Pista p = new Pista();
         Thread tp = new Thread(p);
         
-        Aeronave a = new Aeronave();
-        Thread ta = new Thread(a);
-        
-        tp.start();
-        ta.start();
     }
       
 }
