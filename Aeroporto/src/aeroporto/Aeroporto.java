@@ -22,8 +22,12 @@ public class Aeroporto {
         Aeronave a = new Aeronave();
         Thread ta = new Thread(a);
         
+        Aeronave b = new Aeronave();
+        Thread tb = new Thread(b);
+        
         tp.start();
         ta.start();
+        tb.start();
     }
       
 }
