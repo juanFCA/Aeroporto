@@ -24,13 +24,31 @@ public class Aeronave extends Thread{
     @Override
     public void run(){
         while(true){
-            aeronaves();
             System.out.println("Aeronave Entrando no Espaço Aerio!");
+            aeronaves();
             try {
                 Thread.sleep(Pista.sleepTime());
             } catch (InterruptedException ex) {
                 Logger.getLogger(Aeronave.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+    }
+	
+    public void decolar() {
+	System.out.println("Avião " + nome + " está decolando!");
+    }
+	
+    public void voar() {
+	try {
+            Thread.sleep(2000);
+	} catch (InterruptedException e) {
+            e.printStackTrace();
+	}
+		
+	System.out.println("Avião " + nome + " voando!");
+    }
+	
+    public void aterrissar() {
+        System.out.println("Avião " + nome + " pousou!");
     }
 }
